@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 12</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #012</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Faça um programa em java script que dada a idade de uma pessoa expressa em anos, meses e dias, mostre a espresse em dias. leve em consideração o ano com 365 dias e o mes com 30 dias.</p>
+        <input type="number" id='DiasA' placeholder="Digite um valor em anos">
+        <br><br>
+        <input type="number" id='DiasM' placeholder="Digite um valor em meses">
+        <br><br>
+        <input type="number" id='Dias' placeholder="Digite um valor em dias ">
+        <br><br>
+        <button onclick="go()">Enviar</button>
+    </div>
+</body>
+    <script>
+        function go()
+        {
+            const ano = 365; 
+            const meses = 30;
+            var DAnos = parseFloat(document.querySelector('#DiasA').value) * ano;
+            console.log (DAnos)
+            var DMeses = parseFloat(document.querySelector('#DiasM').value) * meses;
+            var DTotal = parseFloat(document.querySelector('#Dias').value) + DMeses + DAnos;
+        
+            alert('o total é igual a: ' + DTotal +' dias');
+        }
+    </script>
+</html> 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 11</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #011</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Escrever um algoritmo em java script para calcular o valor gasto de combustível de um carro durante um percurso.</p>
+        <input type="number" id='Dist' placeholder="Digite um valor em km">
+        <br><br>
+        <button onclick="go()">Enviar</button>
+    </div>
+</body>
+    <script>
+        function go()
+        {
+            // Definir o valor do litro de combuistivel e o consumo do carro 
+            
+            const gvalue = 6.50; 
+            const car = 12;
+           // Solciitar ao usuario a distancia percorrida em Km 
+
+            var DistP = parseFloat(document.querySelector('#Dist').value);
+            // Calcular a quantidade de litros de combustivel gasto 
+            const litgast = DistP / car;
+
+            // Calcular o valor gasto em reias 
+            const valgast = gvalue * litgast;
+
+            // Exibir o resultado para o usuário 
+            alert('Foi gasto ' + litgast.toFixed(2) + ' litros, totalizando ' + valgast.toFixed(2));
+        }
+    </script>
+</html> 
