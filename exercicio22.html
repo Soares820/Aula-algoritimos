@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>exercicio | 20</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #20</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>QFaça um algoritmo em javascript que, peça três números e imprima o maior deles.</p>
+        <input type="number" id="produto1" placeholder="Digite o primeiro número">
+        <br><br>
+        <input type="number" id="produto2" placeholder="Digite o segundo número">
+        <br><br>
+        <input type="number" id="produto3" placeholder="Digite o terceiro número">
+        <button onclick="verificar()">Enviar</button>
+    </div>    
+</body>
+ <script>
+
+    function verificar()
+    {
+        // solicitar ao usuario para digitar trés números 
+        var produto1 = parseFloat(document.querySelector('#Produto1').value);
+        var produto2 = parseFloat(document.querySelector('#Produto2').value);
+        var produto3 = parseFloat(document.querySelector('#Produto3').value);
+        // verificar qual numero é maior 
+        var maisBarato; 
+    
+        
+       if (produto1 <= produto2 && produto1 <=produto3){
+        maisBarato = "Produto1";
+       } else if (produto2 <=  produto1 && produto2 <= produto3 ) {
+         maisBarato = "Produto2";
+
+       } else {
+        maisBarato = "Produto3";
+       } 
+    
+        // exibir o resultado 
+        alert(" O Produto barato é o " + maisBarato);
+    }
+ </script>
+</html>
