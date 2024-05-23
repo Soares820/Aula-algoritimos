@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 11</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #011</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Escrever um algoritmo em java script para calcular o valor gasto de combustível de um carro durante um percurso.</p>
+        <input type="text" id='tx' placeholder="Digite um valor em km">
+        <br><br>
+        <button onclick="signo()">Enviar</button>
+    </div>
+</body>
+    <script>
+        function signo()
+        {
+            // ler o segino 
+            var texto = document.querySelector('#tx').value;
+            var signo = texto.toUpperCase(); 
+            //console.log(signo)
+            switch (signo) {
+         case "ÁRIES":
+         alert("21 de março a 19 de abril");
+         break; 
+    case "TOURO":
+           alert("20 de abril a 20 de Maio");
+           break;
+     case  "GÊMEOS": 
+          alert("21 de maio a 20 de junho"); 
+          break;
+     case "CÂNCER":
+          alert("21 de junho a 22 de julho");
+          break; 
+    case "LEÃO": 
+           alert('23 de julho a 22 de agosto'); 
+           break; 
+    case "VIRGEM": 
+           alert('23 de agosto a 22 de setembro');
+           break;
+    case "LIBRA": 
+          alert('23 de setembro a 22 de outubro'); 
+          break; 
+    case "ESCORPIÃO": 
+          alert('23 de outubro a 21 de novembro'); 
+          break; 
+    case "SARGITÁRIO": 
+         alert('22 de novembro a 21 de dezembro'); 
+         break; 
+    case "CAPRICÓRNIO": 
+         alert('22 de dezembro e 20 de janeiro');
+         break; 
+    case "AQUÁRIO":
+        alert('21 de janeiro a 18 de fevereiro'); 
+    case "PEIXES": 
+         alert ('19 de fevereiro a 20 de março');
+         break; 
+    default: 
+         alert("Signo Invalido"); 
+         break;
+          
+    
+            }
+        }
+    </script>
+</html> 
