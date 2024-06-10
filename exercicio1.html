@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 01</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #1</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Construa um algoritmo em JAVASCRIPT para determinar se o indivíduo esta com um
+            peso favorável. Essa situação é determinada através do IMC (Índice de Massa Corpórea),
+            que é definida como sendo a relação entre o peso (PESO) e o quadrado da Altura
+            (ALTURA) do indivíduo.</p>
+        <input type="number" id="altura" class="num" placeholder="Digite sua altura.">
+        <br><br>
+        <input type="number" id="peso" class="num" placeholder="Digite seu peso">
+        <br><br>
+        <button onclick="calculation()">Enviar</button>
+    </div>
+
+    <script>
+        function calculation() {
+           let altura = parseFloat(document.querySelector("#altura").value);
+           let peso =  parseFloat(document.querySelector("#peso").value);
+
+           let imc = peso / (altura * altura);
+
+           if (imc < 19.9){
+            alert("Você está abaixo do peso ideal!");
+           } else if (imc >= 20 && imc <= 24.9) {
+            alert("Você está no peso normal!");
+           } else if (imc >= 25 && imc <= 29.9){
+            alert("Você está sobre peso!");
+           } else if (imc >= 30 && imc <= 39.9){
+            alert("Você está obeso!");
+           } else { 
+            alert("Você está obeso mórbido!");
+           }
+        }
+    </script>
+</body>
+</html>
